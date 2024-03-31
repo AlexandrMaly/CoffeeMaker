@@ -1,0 +1,40 @@
+@startuml
+class Coffee.CoffeeCappuccino {
++ void drinkCoffee()
+}
+
+class Main {
++ {static} void main(String[])
+}
+
+class Coffee.CoffeeEspresso {
++ void drinkCoffee()
+}
+
+class App.Application {
+- {static} Display display
+- {static} Scanner sc
++ {static} void appStart()
+- {static} int choice()
+- {static} void handleChoice(int)
+}
+
+
+class Coffee.CoffeeLatte {
++ void drinkCoffee()
+}
+
+interface Coffee.Coffee {
+~ void drinkCoffee()
+}
+
+class View.Display {
++ void display()
+}
+
+
+
+Coffee.Coffee <|.. Coffee.CoffeeCappuccino
+Coffee.Coffee <|.. Coffee.CoffeeEspresso
+Coffee.Coffee <|.. Coffee.CoffeeLatte
+@enduml
